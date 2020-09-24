@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+/* =====================基本設計===================== */
+body{
+	margin: 0;
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	line-height:2;
+	font-size:18px;
+	color: #333333;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a:link { color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+ 	}
+
+a:visited { color: #fff; }
+
+a:hover { color: #fff; }
+
+a:active { color: #fff; }
+
+img {
+	vertical-align: bottom;
+	max-width: 100%;
+	height: auto;
+}
+
+/* =====================メインコンテンツ===================== */
+.container {
+	max-width: 767px;
+	margin: 0 auto;
+  box-shadow: 4px 0px 3px -3px #ccc, -4px 0 3px -3px #ccc;
+}
+
+.btn {
+	position: relative;
+}
+
+.btn img {
+	width: 100%;
+}
+
+.submit-btn-1,
+.submit-btn-2 {
+	position: absolute;
+	top: 66%;
+	left: 35%;
+}
+
+@media (max-width: 767px) {
+	.submit-btn-1,
+	.submit-btn-2 {
+		width: 50%;
+		position: absolute;
+		top: 66%;
+		left: 35%;
+	}
+}
+#scroll-btn {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background: #adb6c6;
+	color: #fff;
+	width: 70px;
+	height: 70px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 50%;
+}
+
+#scroll-btn:hover {
+	background: #cbd1db;
+}
+
+/* 矢印（iタグ）のサイズを大きくし、真ん中に配置する */
+#scroll-btn i {
+	font-size: 50px;
+	line-height: 70px;
+}
+
+/* 上に戻るボタン、スマホだと大きすぎるので小さくする */
+@media (max-width: 767px) {
+
+	.footer-inner {
+		width: 100%;
+	}
+	.footer-inner small{
+		font-size: 12px;
+	}
+
+	/* ボタンのメディアクエリ */
+	#scroll-btn{
+		width: 50px;
+		height: 50px;
+	}
+
+	/* 次に、fontawesomeから持ってきた矢印のサイズを大きくし、真ん中に配置する */
+	#scroll-btn i{
+		font-size: 30px;
+		line-height: 50px;
+		/* scroll-btnのheightと合わせる */
+	}
+}
